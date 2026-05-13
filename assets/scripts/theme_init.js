@@ -2,11 +2,11 @@
     var firstvisit = false;
     if(localStorage.getItem('siteTheme')===null && localStorage.getItem('siteFont')===null){
         localStorage.setItem('siteTheme', 'light');
-        localStorage.setItem('siteFont', 'yahei');
+        localStorage.setItem('siteFont', 'georgia');
         firstvisit = true;  
     }
     const savedTheme = localStorage.getItem('siteTheme') || 'light';
-    const savedFont = localStorage.getItem('siteFont') || 'yahei'; 
+    const savedFont = localStorage.getItem('siteFont') || 'georgia'; 
     if (savedTheme === 'light') {
         document.documentElement.classList.add('light-theme');
     } else {
