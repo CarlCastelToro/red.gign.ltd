@@ -139,10 +139,30 @@ body {
 
 header {
     background-color: var(--primary-color);
+    background-image: url('/assets/img/banner/header.png');
+    background-size: cover;
+    background-position: center;
     color: white;
     padding: 2rem;
     text-align: center;
     margin-bottom: 2rem;
+    position: relative;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+header > * {
+    position: relative;
+    z-index: 2;
 }
 
 h1 {
@@ -1175,4 +1195,10 @@ ol {
 
 .about-content li {
     margin: 0.1rem 0;
+}
+
+@media (min-width: 769px) {
+    header {
+        padding: 4rem 2rem;
+    }
 }
